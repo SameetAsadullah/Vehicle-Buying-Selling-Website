@@ -1,0 +1,30 @@
+title{
+  text-shadow: 3px 2px yellow;
+}
+body {
+  text-align: center;
+  font-family: monospace;
+  background:url(./101.jpg)  no-repeat center center;
+  background-size:cover;
+}
+h1{
+  color:white
+}
+h2{
+  color:white
+}
+h3{
+  color:white
+}
+p{
+  font-size:20px;
+  color:cyan
+}
+  img {
+  border: 3px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 400px;
+}
+
+  
