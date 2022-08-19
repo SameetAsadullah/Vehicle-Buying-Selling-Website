@@ -1,0 +1,193 @@
+<h1>Get a Car, Wherever You Are</h1>
+<section class="mt-5 mx-5" id="searchFilter">
+  <form>
+    <div class="row">
+      <div class="col-md-2">
+        <label for="cities">Choose City:</label>
+      </div>
+
+      <div class="col-md-4">
+        <select id="cities" class="mx-2" (change)="cityChangeHandler($event)">
+          <option value="Islamabad">Islamabad</option>
+          <option value="Karachi">Karachi</option>
+          <option value="Lahore">Lahore</option>
+          <option value="Faisalabad">Faisalabad</option>
+          <option value="Rawalpindi">Rawalpindi</option>
+        </select>
+      </div>
+
+      <div class="col-md-2">
+        <label for="make">Choose Make:</label>
+      </div>
+
+      <div class="col-md-4">
+        <select id="make" class="mx-2" (change)="makeChangeHandler($event)">
+          <option value="Audi">Audi</option>
+          <option value="Mercedes">Mercedes</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Kawasaki">Kawasaki</option>
+          <option value="Ferrari">Ferrari</option>
+          <option value="Honda">Honda</option>
+          <option value="BMW">BMW</option>
+          <option value="Suzuki">Suzuki</option>
+          <option value="Tesla">Tesla</option>
+          <option value="Ford">Ford</option>
+        </select>
+      </div>
+
+      <div class="col-md-2">
+        <label for="minimumPrice">Price Range:</label>
+      </div>
+
+      <div class="col-md-4">
+        <input
+          id="minimumPrice"
+          class="mx-2"
+          type="number"
+          placeholder="Enter Minimum"
+        />
+        <input type="number" id="maximumPrice" placeholder="Enter Maximum" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="year">Enter Year:</label>
+      </div>
+
+      <div class="col-md-4">
+        <input class="mx-2" id="year" type="number" placeholder="Enter Year" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="mileage">Enter Mileage:</label>
+      </div>
+
+      <div class="col-md-4">
+        <input
+          class="mx-2"
+          id="mileage"
+          type="number"
+          placeholder="Enter Mileage"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="color">Enter Color:</label>
+      </div>
+      <div class="col-md-4">
+        <input class="mx-2" id="color" type="text" placeholder="Enter Color" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="engineCapacity">Enter Engine Capacity:</label>
+      </div>
+      <div class="col-md-4">
+        <input
+          class="mx-2"
+          id="engineCapacity"
+          type="text"
+          placeholder="Enter Engine Capacity"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="vehicleType">Enter Vehicle Type:</label>
+      </div>
+      <div class="col-md-4">
+        <input
+          class="mx-2"
+          id="vehicleType"
+          type="text"
+          placeholder="Enter Vehicle Type"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="rating">Enter Rating:</label>
+      </div>
+      <div class="col-md-4">
+        <input
+          class="mx-2"
+          id="rating"
+          type="number"
+          placeholder="Enter Rating"
+        />
+      </div>
+    </div>
+
+    <div class="text-center mt-2">
+      <input
+        type="button"
+        value="Search"
+        class="align-center btn btn-primary px-4"
+        id="searchButton"
+        (click)="search()"
+      />
+      <input
+        type="button"
+        value="Reset Search"
+        class="align-center btn btn-primary ml-2"
+        id="resetSearchButton"
+        (click)="resetSearch()"
+      />
+    </div>
+  </form>
+</section>
+
+<section class="text-center mt-2">
+  <a class="btn btn-primary" routerLink="/addVehicle">
+    Add Vehicle
+  </a>
+</section>
+
+<section>
+  <div class="container-lg">
+    <div class="row justify-content-center" id="vehicles">
+      <div
+        class="col-md-3 col-6 mt-4"
+        id="vehicleCard"
+        *ngFor="let vehicle of vehicles; let i = index"
+      >
+        <div class="card shadow-lg">
+          <img
+            src="{{ vehicle.image }}"
+            class="card-img-top"
+            alt="..."
+            id="image"
+          />
+          <div class="card-body fs-1">
+            <h5 class="card-title text-center">{{ vehicle?.title }}</h5>
+            <ul>
+              <li>Location: {{ vehicle.location }}</li>
+              <li>Price: {{ vehicle?.price }}</li>
+              <li>Date: {{ vehicle?.date }}</li>
+              <li>Rating: {{ vehicle?.rating }}</li>
+            </ul>
+            <div class="text-center">
+              <a
+                class="btn btn-primary px-4"
+                routerLink="/display/{{ vehicle._id }}"
+                style="color: black;"
+              >
+                View Details
+              </a>
+              <button
+                class="btn btn-primary px-3 my-1"
+                (click)="deleteVehicle(vehicle, i)"
+                style="color: black;"
+              >
+                Delete Vehicle
+              </button>
+              <a
+                class="btn btn-primary px-4"
+                routerLink="/editVehicle/{{ vehicle._id }}"
+                style="color: black;"
+              >
+                Edit Vehicle
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

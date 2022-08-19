@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro');
+
+#centerItems {
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Roboto Slab", serif;
+}
+
+h1 {
+    margin-top: 15px;
+}
+
+#image {
+    width: 550px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+p {
+    font-family: "Source Sans Pro", serif;
+}

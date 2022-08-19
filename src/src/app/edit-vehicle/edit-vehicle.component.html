@@ -1,0 +1,398 @@
+<h1>Edit a Vehicle</h1>
+<p class="mx-5 mt-2" style="color: red;">* = Required Field</p>
+<section class="mx-5" id="addVehicle">
+  <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-2">
+        <label for="uploadImage">
+          Upload Image:
+          <span style="color: red;">*</span>
+        </label>
+      </div>
+      <div class="col-md-2">
+        <input id="uploadImage" type="file" accept="image/png, image/jpeg" />
+      </div>
+
+      <div class="col-md-2">
+        <label for="title">
+          Title:
+          <span style="color: red;">*</span>
+        </label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="title"
+          type="text"
+          placeholder="Enter Title"
+          formControlName="title"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="location">
+          Location:
+          <span style="color: red;">*</span>
+        </label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="location"
+          type="text"
+          placeholder="Enter Location"
+          formControlName="location"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="make">Make:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="make"
+          type="text"
+          placeholder="Enter Make"
+          formControlName="make"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="type">Type:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="type"
+          type="text"
+          placeholder="Enter Type"
+          formControlName="type"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="price">
+          Price:
+          <span style="color: red;">*</span>
+        </label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="price"
+          type="number"
+          placeholder="Enter Price"
+          formControlName="price"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="date">Date:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="date"
+          type="date"
+          placeholder="Enter Date"
+          formControlName="date"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="rating">Rating:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="rating"
+          type="number"
+          placeholder="Enter Rating"
+          formControlName="rating"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="model">Model:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="model"
+          type="text"
+          placeholder="Enter Model"
+          formControlName="model"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="year">
+          Year:
+          <span style="color: red;">*</span>
+        </label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="year"
+          type="number"
+          placeholder="Enter Year"
+          formControlName="year"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="transmission">Transmission:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="transmission"
+          type="text"
+          placeholder="Enter Transmission"
+          formControlName="transmission"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="mileage">Mileage:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="mileage"
+          type="text"
+          placeholder="Enter Mileage"
+          formControlName="mileage"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="color">Color:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="color"
+          type="text"
+          placeholder="Enter Color"
+          formControlName="color"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="registeredIn">Registered In:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="registeredIn"
+          type="number"
+          placeholder="Enter Year"
+          formControlName="registeredIn"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="assembly">Assembly:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="assembly"
+          type="text"
+          placeholder="Enter Assembly"
+          formControlName="assembly"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="engineCapacity">Engine Capacity:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="engineCapacity"
+          type="text"
+          placeholder="Enter Engine Capacity"
+          formControlName="engineCapacity"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="lastUpdated">Last Updated:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="lastUpdated"
+          type="date"
+          formControlName="lastUpdated"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="featuresList">Features List:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="featuresList"
+          type="text"
+          placeholder="Enter Features List"
+          formControlName="featuresList"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="exteriorCondition">Exterior Condition:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="exteriorCondition"
+          type="text"
+          placeholder="Enter Exterior Condition"
+          formControlName="exteriorCondition"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="interiorCondition">Interior Condition:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="interiorCondition"
+          type="text"
+          placeholder="Enter Interior Condition"
+          formControlName="interiorCondition"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="engineCondition">Engine Condition:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="engineCondition"
+          type="text"
+          placeholder="Enter Engine Condition"
+          formControlName="engineCondition"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="transmissionCondition">Transmission Condition:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="transmissionCondition"
+          type="text"
+          placeholder="Enter Transmission Condition"
+          formControlName="transmissionCondition"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="suspensionCondition">Suspension Condition:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="suspensionCondition"
+          type="text"
+          placeholder="Enter Suspension Condition"
+          formControlName="suspensionCondition"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="steeringCondition">Steering Condition:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="steeringCondition"
+          type="text"
+          placeholder="Enter Steering Condition"
+          formControlName="steeringCondition"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="sellerContactNo">Seller Contact No:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="sellerContactNo"
+          type="number"
+          placeholder="Enter Seller Contact No"
+          formControlName="sellerContactNo"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="sellerEmail">Seller Email:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="sellerEmail"
+          type="email"
+          placeholder="Enter Seller Email"
+          formControlName="sellerEmail"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="sellerLocation">Seller Location:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="sellerLocation"
+          type="text"
+          placeholder="Enter Seller Location"
+          formControlName="sellerLocation"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="sellerContactHours">Seller Contact Hours:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="sellerContactHours"
+          type="text"
+          placeholder="Enter Seller Contact Hours"
+          formControlName="sellerContactHours"
+        />
+      </div>
+
+      <div class="col-md-2">
+        <label for="sellerComments">Seller Comments:</label>
+      </div>
+      <div class="col-md-2 form-group">
+        <input
+          class="form-control"
+          id="sellerComments"
+          type="text"
+          placeholder="Enter Seller Comments"
+          formControlName="sellerComments"
+        />
+      </div>
+    </div>
+
+    <div class="form-group text-center mt-4">
+      <button class="btn btn-success px-5" type="submit">
+        Edit
+      </button>
+    </div>
+  </form>
+</section>
