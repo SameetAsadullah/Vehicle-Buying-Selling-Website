@@ -1,7 +1,7 @@
 <h1 align="center">Vehicle Buying and Selling Website</h1>
 
 ### Description
-A `Vehicle Buying and Selling Website` using Angular, Typescript, HTML, CSS, Bootsrap, and MongoDB.
+A `Vehicle Buying and Selling Website` using Angular, Typescript, HTML, CSS, Bootstrap, and MongoDB.
 
 ### Functionalities
 User can edit/delete/view all advertised vehicles and add new ones as well
